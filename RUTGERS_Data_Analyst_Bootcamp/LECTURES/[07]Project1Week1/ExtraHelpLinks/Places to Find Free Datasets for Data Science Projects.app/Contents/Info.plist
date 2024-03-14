@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>ApplicationIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.Safari.WebApp.BB6BBFC5-C4BE-4F48-A804-F8530DDE1DB0</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Places to Find Free Datasets for Data Science Projects</string>
+	<key>CFBundlePackageType</key>
+	<string>AAPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>x-webkit-app-launch</string>
+			</array>
+			<key>LSHandlerRank</key>
+			<string>None</string>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>LSTemplateApplication</key>
+	<true/>
+	<key>LSTemplateApplicationParameters</key>
+	<dict>
+		<key>CFBundleIdentifier</key>
+		<string>com.apple.Safari.WebApp</string>
+		<key>TemplateAppUUID</key>
+		<string>BB6BBFC5-C4BE-4F48-A804-F8530DDE1DB0</string>
+		<key>defaultarguments</key>
+		<true/>
+		<key>teamIdentifier</key>
+		<string>0000000000</string>
+	</dict>
+	<key>Manifest</key>
+	<dict>
+		<key>name</key>
+		<string>21 Places to Find Free Datasets for Data Science Projects (Shared Article from Dataquest) – Career &amp; Internship Center | University of Washington</string>
+		<key>scope</key>
+		<string>https://careers.uw.edu</string>
+		<key>short_name</key>
+		<string>Places to Find Free Datasets for Data Science Projects</string>
+		<key>start_url</key>
+		<string>https://careers.uw.edu/blog/2021/10/05/21-places-to-find-free-datasets-for-data-science-projects-shared-article-from-dataquest/</string>
+	</dict>
+	<key>WKManifestIsSynthesized</key>
+	<true/>
+	<key>WKPushBundleMetadata</key>
+	<dict>
+		<key>manifestId</key>
+		<string>https://careers.uw.edu/blog/2021/10/05/21-places-to-find-free-datasets-for-data-science-projects-shared-article-from-dataquest/</string>
+	</dict>
+</dict>
+</plist>

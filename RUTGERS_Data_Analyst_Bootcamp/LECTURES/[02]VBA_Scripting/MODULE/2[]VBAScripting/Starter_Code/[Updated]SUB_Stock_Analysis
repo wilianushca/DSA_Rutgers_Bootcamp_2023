@@ -1,0 +1,122 @@
+Attribute VB_Name = "Module1"
+  Sub StockYearlyAnalysis()
+    'Declaring Important Variables
+    Dim ws As Worksheet
+    Dim lastRow As Long
+    Dim tickerSymbol As String
+    Dim openingPrice As Double
+    Dim closingPrice As Double
+    Dim yearlyChange As Double
+    Dim percentChange As Double
+    Dim totalVolume As Double
+    Dim rowCount As Long
+    Dim greatestIncrease As Double
+    Dim greatestDecrease As Double
+    Dim greatestVolume As Double
+    Dim greatestIncreaseTicker As String
+    Dim greatestDecreaseTicker As String
+    Dim greatestVolumeTicker As String
+    
+    ' Defining the worksheet and locating it.
+    
+    Set ws = ActiveSheet
+    
+    For Each ws In ActiveWorkbook.Worksheets
+    
+    ' Initialize variables and setting the last row to count through all the rows
+    lastRow = ws.Cells(Rows.Count, 1).End(xlUp).Row
+    ' Starts from row 2 to output data
+    rowCount = 2
+    'Simply using the <1E+308> to express that this number is in the scientific notation [1x10^]
+    greatestIncrease = -1E+308
+    greatestDecrease = 1E+308
+    greatestVolume = -1E+308
+    
+    ' Set headers for output and naming them ["Ticker Symbol","Yearly Change","Percent Change","Total Stock Volume"]
+    ws.Cells(1, 9).Value = "Ticker Symbol"
+    ws.Cells(1, 10).Value = "Yearly Change"
+    ws.Cells(1, 11).Value = "Percent Change"
+    ws.Cells(1, 12).Value = "Total Stock Volume"
+    
+    ' Initialize variables for the first ticker symbol so we can gather up the sums
+    tickerSymbol = ws.Cells(2, 1).Value
+    openingPrice = ws.Cells(2, 3).Value
+    totalVolume = 0
+    
+    ' Loop through rows with stock data
+    For i = 2 To lastRow
+        ' Check if the current row has a different ticker symbol then the upcoming ticker symbol
+        If ws.Cells(i, 1).Value <> tickerSymbol Then
+            ' Calculate yearly change and percent change
+            closingPrice = ws.Cells(i - 1, 6).Value
+            yearlyChange = closingPrice - openingPrice
+            If openingPrice <> 0 Then
+                percentChange = (yearlyChange / openingPrice) * 100
+            Else
+                percentChange = 0
+            End If
+            
+             ' Determine color based on yearly change
+            If yearlyChange >= 0 Then
+                colorCode = RGB(0, 255, 0) ' Green for positive yearly change
+            Else
+                colorCode = RGB(255, 0, 0) ' Red for negative yearly change
+            End If
+            
+            ' Output data to the row underneath the headers with 'rowCount'
+            ws.Cells(rowCount, 9).Value = tickerSymbol
+            ws.Cells(rowCount, 10).Value = yearlyChange
+            ws.Cells(rowCount, 11).Value = percentChange
+            ws.Cells(rowCount, 12).Value = totalVolume
+            ws.Cells(rowCount, 10).Interior.Color = colorCode ' Applies the color
+            
+            ' Changing the format to be a percentage
+            ws.Cells(rowCount, 11).NumberFormat = "0.00%"
+        
+            ' Updates to check and see if we still have the greatest of anything still
+            If percentChange > greatestIncrease Then
+                greatestIncrease = percentChange
+                greatestIncreaseTicker = tickerSymbol
+            End If
+            If percentChange < greatestDecrease Then
+                greatestDecrease = percentChange
+                greatestDecreaseTicker = tickerSymbol
+            End If
+            If totalVolume > greatestVolume Then
+                greatestVolume = totalVolume
+                greatestVolumeTicker = tickerSymbol
+            End If
+            
+            ' Move the rowcount down a position by adding 1 to it
+            rowCount = rowCount + 1
+            
+            ' Reseting the variable for the next tick symbol
+            tickerSymbol = ws.Cells(i, 1).Value
+            openingPrice = ws.Cells(i, 3).Value
+            totalVolume = 0
+        End If
+        
+        ' Accumulating the total for the stock ticker symbol
+        totalVolume = totalVolume + ws.Cells(i, 7).Value
+    Next i
+    
+    ' Output the stocks with the greatest values
+    ws.Cells(2, 15).Value = "Greatest % Increase"
+    ws.Cells(3, 15).Value = "Greatest % Decrease"
+    ws.Cells(4, 15).Value = "Greatest Total Volume"
+    ws.Cells(2, 16).Value = greatestIncreaseTicker
+    ws.Cells(3, 16).Value = greatestDecreaseTicker
+    ws.Cells(4, 16).Value = greatestVolumeTicker
+    ws.Cells(2, 17).Value = greatestIncrease
+    ws.Cells(3, 17).Value = greatestDecrease
+    ws.Cells(4, 17).Value = greatestVolume
+    
+    'Changing the Format of the % cells
+    ws.Cells(2, 17).NumberFormat = "0.00%"
+    ws.Cells(3, 17).NumberFormat = "0.00%"
+    
+Next ws
+
+End Sub
+
+

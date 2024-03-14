@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>ApplicationIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.Safari.WebApp.F0D72456-95BE-4D01-81EF-CA86EC6170F0</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>PandasPlottingWithMatPlotLib</string>
+	<key>CFBundlePackageType</key>
+	<string>AAPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>x-webkit-app-launch</string>
+			</array>
+			<key>LSHandlerRank</key>
+			<string>None</string>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>LSTemplateApplication</key>
+	<true/>
+	<key>LSTemplateApplicationParameters</key>
+	<dict>
+		<key>CFBundleIdentifier</key>
+		<string>com.apple.Safari.WebApp</string>
+		<key>TemplateAppUUID</key>
+		<string>F0D72456-95BE-4D01-81EF-CA86EC6170F0</string>
+		<key>defaultarguments</key>
+		<true/>
+		<key>teamIdentifier</key>
+		<string>0000000000</string>
+	</dict>
+	<key>Manifest</key>
+	<dict>
+		<key>name</key>
+		<string>Plotting with matplotlib — pandas 0.13.1 documentation</string>
+		<key>scope</key>
+		<string>https://pandas.pydata.org</string>
+		<key>short_name</key>
+		<string>PandasPlottingWithMatPlotLib</string>
+		<key>start_url</key>
+		<string>https://pandas.pydata.org/pandas-docs/version/0.13.1/visualization.html</string>
+	</dict>
+	<key>WKManifestIsSynthesized</key>
+	<true/>
+	<key>WKPushBundleMetadata</key>
+	<dict>
+		<key>manifestId</key>
+		<string>https://pandas.pydata.org/pandas-docs/version/0.13.1/visualization.html</string>
+	</dict>
+</dict>
+</plist>

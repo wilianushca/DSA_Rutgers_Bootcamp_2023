@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIconFile</key>
+	<string>ApplicationIcon</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.Safari.WebApp.47ECDBE8-D884-4A81-A899-433E3333936A</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Functions - Excel Practice Online</string>
+	<key>CFBundlePackageType</key>
+	<string>AAPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>x-webkit-app-launch</string>
+			</array>
+			<key>LSHandlerRank</key>
+			<string>None</string>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>LSTemplateApplication</key>
+	<true/>
+	<key>LSTemplateApplicationParameters</key>
+	<dict>
+		<key>CFBundleIdentifier</key>
+		<string>com.apple.Safari.WebApp</string>
+		<key>TemplateAppUUID</key>
+		<string>47ECDBE8-D884-4A81-A899-433E3333936A</string>
+		<key>defaultarguments</key>
+		<true/>
+		<key>teamIdentifier</key>
+		<string>0000000000</string>
+	</dict>
+	<key>Manifest</key>
+	<dict>
+		<key>name</key>
+		<string>Functions - Excel Practice Online</string>
+		<key>scope</key>
+		<string>https://excel-practice-online.com</string>
+		<key>start_url</key>
+		<string>https://excel-practice-online.com/functions/</string>
+	</dict>
+	<key>WKManifestIsSynthesized</key>
+	<true/>
+	<key>WKPushBundleMetadata</key>
+	<dict>
+		<key>manifestId</key>
+		<string>https://excel-practice-online.com/functions/</string>
+	</dict>
+</dict>
+</plist>
